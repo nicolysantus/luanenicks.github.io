@@ -2,7 +2,8 @@ body{
 	min-height:100vh;
 	margin:175px;
 	max-height:100vh;
-	overflow:hidden;
+	overflow: auto;
+	overflow-x: auto;
     background-image: url('https://i.pinimg.com/736x/a9/eb/68/a9eb6856b82452d4929f95f43c12082f.jpg');
     background-size: cover;
 	background-size: 100%;
@@ -133,10 +134,34 @@ h1,h2,h3{
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-	position: absolute; /* Define a posição absoluta */
-    top: 50%; /* Define a posição vertical no meio da tela */
-    left: 50%; /* Define a posição horizontal no meio da tela */
+	position: absolute; 
+    top: 50%; 
+    left: 50%; 
     transform: translate(-50%, -50%);
 	top: 225px;
    
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-y: auto; 
+    }
+}
+
+::-webkit-scrollbar {
+    width: 12px; 
+    height: 12px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 6px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
