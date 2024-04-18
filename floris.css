@@ -1,0 +1,142 @@
+body{
+	min-height:100vh;
+	margin:175px;
+	max-height:100vh;
+	overflow:hidden;
+    background-image: url('https://i.pinimg.com/736x/a9/eb/68/a9eb6856b82452d4929f95f43c12082f.jpg');
+    background-size: cover;
+	background-size: 100%;
+}
+
+
+
+.centralizado{
+	margin:auto;
+	width:max-content;
+
+}
+
+.florisbook{
+	margin:3em auto;
+	width:400px;
+	height:300px;
+	position:relative;
+	transform-style: preserve-3d;
+	perspective:1000px; 
+}
+
+.folha{
+	position:absolute;
+	transform-style: preserve-3d;
+	height:100%;
+	width:50%;
+	background-color:#fff;
+	left:50%;
+	transition:transform 1s;
+	transform:rotate3d(0 ,1 , 0, 0deg);
+	transform-origin:left 0px;
+
+.pagina{
+	transform-style: preserve-3d;
+	position:absolute;
+	width:100%;
+	height:100%;
+	top:0;
+			&.frente{
+				transform:rotate3d(0 ,1 , 0, 0deg) translate3d(0,0,0.1px);
+				&:not(.externo) {box-shadow: inset 5px 0px 5px -5px #0005;}
+			}
+
+			&.verso{
+				transform:rotate3d(0 ,1 , 0, 180deg) translate3d(0,0,0.1px);
+				&:not(.externo) {box-shadow: inset -5px 0px 5px -5px #0005;}
+			}	
+		    
+		    &.virado{
+			    transform:rotatey(180deg);
+		    } 
+    }
+        
+}
+.desativado{
+	user-select:none;
+	opacity:0.6;
+}
+
+Book page Styles
+
+.titulo{
+	text-align:center;
+	width:100%;
+	padding:0em!important;
+	padding-top:2em;
+}
+.pagina{
+	padding:1em;
+	&.frente{border-radius:0em 1em 1em 0;}
+	&.verso{border-radius:1em 0em 0em 1em;}
+}
+
+.folha{
+	background-color:#0000!important;
+}
+
+.numeroPagina{
+	font-size:0.75em;
+	position:absolute;
+	bottom:0.5em;
+}
+.frente .numeroPagina{
+	right:0.75em;
+}
+.verso .numeroPagina{
+	left:0.75em;
+}
+.linhaConteudo{
+	display:flex;
+	flex-flow:row nowrap;
+
+	.espacador{
+		flex:1 1;
+		height:1em;
+		border-bottom:1px dashed #000;
+	}
+.texto{flex:0 0 auto;}
+
+}
+h1,h2,h3{
+	font-family:cursive;
+}
+
+.corpo[onload]{
+	transform:scale(1.5);
+	transform-origin:center top;
+	.folha:nth-child(1){
+		transform:rotate3d(0, 1, 0, -128deg)!important;
+	}
+	.folha:nth-child(2){
+		transform:rotate3d(0, 1, 0, -70deg)!important;
+	}
+	.folha:nth-child(3){
+		transform:rotate3d(0, 1, 0, -40deg)!important;
+	}
+	div.folha:nth-child(4) > div:nth-child(1){
+		background-color:#e76f51;
+	}
+}
+
+.cd__intro{
+	background-color:#c0e;
+} 
+
+.ilovemyboyfriend {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+	position: absolute; /* Define a posição absoluta */
+    top: 50%; /* Define a posição vertical no meio da tela */
+    left: 50%; /* Define a posição horizontal no meio da tela */
+    transform: translate(-50%, -50%);
+	top: 225px;
+   
+}
